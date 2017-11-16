@@ -1,0 +1,22 @@
+
+
+input[type="tel"] {
+  width: 59%;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: relative; content: '✖';
+  padding-left: 5px;
+  color: #d10e0e;
+}
+
+input:valid+span:after {
+  position: relative;
+  content: '✓';
+  padding-left: 5px;
+  color: #34A65F;
+}

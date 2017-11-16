@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Secret Santa Name Picker</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/phoneNumber.css" />
+	</head>
+<body>
+
+<!-- Header -->
+	<header id="header">
+		<div class="logo"><a href="#">Secret Santa <span>Name Picker</span></a></div>
+	</header>
+
+<!-- Main -->
+	<section id="main">
+		<div class="inner">
+			<div class="wrapper style1">
+				<div class="content">
+
+					<!-- Elements -->
+						<h2 id="element">Enter Info</h2>
+						<p>Participants of the game will receive a text stating who they will be buying a gift for!</p>
+						<div class="row 200%">
+							<div class="6u 12u$(medium)">
+
+							</div>
+							<div class="6u$ 12u$(medium)">
+								<!-- Form -->
+									<form method="post" action="#">
+										<div class="uniform" >
+											<div class="select-wrapper">
+												<div>
+													<div style="padding-bottom: 0.5rem; font-size: 4rem;">
+														<input type="submit" value="Submit" style= "font-size: 1.3rem;" >
+													</div>
+														<div style="padding-bottom: 1rem;">
+															<input type="text" name="price" id="name" value="" placeholder="Price Of Gifts" />
+														</div>
+												</div>
+											</div>
+											<!-- Break -->
+											<div><a href="#" style="color:#1e1f23;" id="addnew">Add Another Relative/Friend</a></div>
+											<div id="allrows" class="seperater">
+												<div id="firstrow">
+													<input id="name" type="text" name="name" required placeholder="Name" />
+													<input id="telNo "type="tel" name="telNo" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Phone Number"/>
+													<span class="validity"></span>
+												</div>
+											</div>
+										</div>
+									</form>
+									<hr />
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+<!-- Footer -->
+	<footer id="footer">
+		<div class="copyright">
+			&copy; Untitled. All rights reserved.
+		</div>
+	</footer>
+
+<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="assets/js/addInputs.js"></script>
+	<script src="assets/js/pickRandomNames.js"></script>
+</body>
+</html>

@@ -1,14 +1,26 @@
-function myFunction(/**name**/) {
+
+function myFunction() {
+  //all names and numbers input
   var allInfo = document.getElementById("allrows");
   var inputInfo = allInfo.querySelectorAll("input");
+  //price input
+  var priceInput = document.getElementById("giftPrice").querySelector("input").value;
+  //name of person who submitted form input
+  var makerNameInput = document.getElementById("maker").querySelector("input").value;
+
+  //move all info in arrays to send to php script
   var name = [];
   var number = [];
+  var price = [];
+  var makerName = [];
+  price[0] = priceInput;
+  makerName[0] = makerNameInput
   for(i=0, j=0; i < inputInfo.length ;i=i+2, j++) {
       name[j] = inputInfo[i].value;
       number[j] = inputInfo[i+1].value;
-      //document.getElementById("demo").innerHTML += name[j];
-      //document.getElementById("demo").innerHTML += number[j];
   }
+
+  //randomize name array so that all values are in a unique index
   name = name.slice();
   var mark = name.map(function() { return false; });
   for(var i = name.length - 1, u = name.length - 1; u > 0; i--) {
@@ -29,10 +41,22 @@ function myFunction(/**name**/) {
           u--;
       }
   }
-  $.post('sendTexts.php', {name: name})
-
+  //create an array of all the info gathered to send to php script
+  var infoToBeSent = {};
+  infoToBeSent.price = price;
+  infoToBeSent.name = name;
+  infoToBeSent.number = number;
+  infoToBeSent.makerName = makerName;
+  //create ajax request using post to send infoToBeSent to sendTexts.php script
+  $.ajax({
+    url: '/sendTexts.php',
+    type: 'post',
+    data: {"AllInfo" : JSON.stringify(infoToBeSent)},
+  });
 }
 
+
+//derandement of the numbers
 function derangeNum(n) {
   if(n == 0) {
       return 1;

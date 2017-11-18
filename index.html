@@ -19,25 +19,24 @@
 		<div class="inner">
 			<div class="wrapper style1">
 				<div class="content">
-
 					<!-- Elements -->
 						<h2 id="element">Enter Info</h2>
 						<p>Participants of the game will receive a text stating who they will be buying a gift for!</p>
 						<div class="row 200%">
-							<div class="6u 12u$(medium)">
-
-							</div>
 							<div class="6u$ 12u$(medium)">
 								<!-- Form -->
-									<form method="post" action="#">
+									<form method="post" action="#" onsubmit="myFunction()">
 										<div class="uniform" >
 											<div class="select-wrapper">
 												<div>
 													<div style="padding-bottom: 0.5rem; font-size: 4rem;">
 														<input type="submit" value="Submit" style= "font-size: 1.3rem;" >
 													</div>
-														<div style="padding-bottom: 1rem;">
-															<input type="text" name="price" id="name" value="" placeholder="Price Of Gifts" />
+														<div id="giftPrice" style="padding-bottom: 1rem;">
+															<input type="text" name="price" id="name" value="" required placeholder="Minimum Gift Price" />
+														</div>
+														<div id="maker" style="padding-bottom: 1rem;">
+															<input type="text" name="maker" id="makerName" value="" required placeholder="Name of Person Submitting" />
 														</div>
 												</div>
 											</div>
@@ -46,7 +45,7 @@
 											<div id="allrows" class="seperater">
 												<div id="firstrow">
 													<input id="name" type="text" name="name" required placeholder="Name" />
-													<input id="telNo "type="tel" name="telNo" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Phone Number"/>
+													<input id="telNo "type="tel" name="telNo" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="cell (eg. XXXXXXXXXX)"/>
 													<span class="validity"></span>
 												</div>
 											</div>
